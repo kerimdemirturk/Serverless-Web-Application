@@ -3,6 +3,9 @@ Deploying a serverless web app by using AWS Amplify,Aws cognito,Amazon API Gatey
 
 In This project I will create a serverless web app for requesting unicorn ride from aws example web site http://www.wildrydes.com/ show the where are the unicorns and take a request from users for ride the unicorns and show the closest unicorn.Also with the app user can register the service and log in.I will use Amplify for static web hosting include html,css,javascript and image files,Cognito for user management,AWS API gateway for restful apı and dynamodb for serverless backend.
 
+Chard of the application:
+![chard](docs/assets/Screenshot%20from%202023-04-05%2020-25-41.png)
+
 Start to project with creating a git repo in aws.I use CodeCommit for this.To use CodeCommit have to set up git credential first.Then I can clone to repo and dowland necessery files from S3 bucket which provided from aws itself.I will also add this files to github repo for showing but I dont create this files.Files provided from AWS and I use them for project.
 ![gitcommit repo](docs/assets/Screenshot%20from%202023-04-10%2018-19-03.png)
 ![gitcommit repo](docs/assets/Screenshot%20from%202023-04-10%2018-19-18.png)
@@ -34,6 +37,21 @@ Then testing lambda function functionality
 ![testing](docs/assets/Screenshot%20from%202023-04-10%2022-19-01.png)
 Now it works.
 ![testing2](docs/assets/Screenshot%20from%202023-04-10%2022-19-30.png)
+
+In the final part of the project I will deploy rest API by using Amazon API Gateway.I will use apı for exposing lambda function.The static website which I deployed  already has a page configured to interact with the API. The page at /ride.html has a simple map-based interface for requesting a unicorn ride. After authenticating using the /signin.html page,users will be able to select their pickup location by clicking a point on the map and then requesting a ride by choosing the "Request Unicorn" button in the upper right corner.
+
+First I start with creating a rest apı in API Gateway.
+![testing2](docs/assets/Screenshot%20from%202023-04-10%2022-36-36.png)
+Create a resource and methods for apı.
+![testing2](docs/assets/Screenshot%20from%202023-04-10%2022-39-17.png)
+Then update config file and replace a apı url.Now application is completely functional and ready to use.
+![testing2](docs/assets/Screenshot%20from%202023-04-10%2023-05-57.png)
+![testing2](docs/assets/Screenshot%20from%202023-04-10%2023-06-09.png)
+
+
+
+
+
 
 
 
