@@ -21,3 +21,42 @@ Then update to config file and replace the cognito userpoolıd and userpoolclien
 ![verify1](docs/assets/Screenshot%20from%202023-04-10%2021-12-20.png)
 ![website](docs/assets/Screenshot%20from%202023-04-10%2021-29-30.png)
 ![website](docs/assets/Screenshot%20from%202023-04-10%2021-29-35.png)
+
+This part of project I will use aws lambda and amazon dnamodb for build a backend for application.This backend handling request of web application.Users request of this app is customers want unicorns to their location and javascript running in browser have to invoke for fulfilling this request.I will use aws lambda for this.Lambda function invoke everytime a user request a unicorn.Lambda function select a closest unicorn in the dynamodb table then frontend app show the user to unicorn.
+
+First start with create a dynamodb table.
+![dynamodb](docs/assets/Screenshot%20from%202023-04-10%2021-56-39.png)
+Then create a IAM role my lambda function.This role gives a permisson to lambda function to write cloudwatch logs and put items to dynamodb table.Give to necessary policies to role and create the role I will attach this role to lambda function.
+![ıamrole](docs/assets/Screenshot%20from%202023-04-10%2022-00-51.png)
+Second I need to create a lambda function for processing apı request and dispatch unicorns.I use lambdafunction.js for lambda function.
+![lambda](docs/assets/Screenshot%20from%202023-04-10%2022-12-45.png)
+Then testing lambda function functionality
+![testing](docs/assets/Screenshot%20from%202023-04-10%2022-19-01.png)
+Now it works.
+![testing2](docs/assets/Screenshot%20from%202023-04-10%2022-19-30.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
